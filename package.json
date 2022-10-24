@@ -1,0 +1,32 @@
+{
+  "name": "@autopia/scripts",
+  "version": "1.0.0",
+  "description": "Autopia Scripts",
+  "main": "index.js",
+  "repository": "",
+  "author": "Razvan Soare <soare.razvan94@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "autopia": "TSC_COMPILE_ON_ERROR=true ESLINT_NO_DEV_ERRORS=true ts-node ./src/index.ts",
+    "build": "npm run -s clean && tsc",
+    "generate:graphql": "DEBUG=1 graphql-codegen",
+    "clean": "rimraf dist && rimraf tsconfig.tsbuildinfo"
+  },
+  "dependencies": {
+    "command-line-args": "^5.1.3",
+    "command-line-usage": "^6.1.1",
+    "date-fns": "^2.29.3",
+    "dotenv": "^16.0.3",
+    "pg": "^8.8.0",
+    "prompt": "^1.3.0",
+    "typescript": "^4.8.4"
+  },
+  "devDependencies": {
+    "@types/command-line-args": "^5.0.1",
+    "@types/command-line-usage": "^5.0.2",
+    "@types/node": "^16.3.3",
+    "@types/pg": "^8.6.5",
+    "@types/prompt": "^1.1.4",
+    "ts-node": "10.8.0"
+  }
+}
